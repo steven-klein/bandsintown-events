@@ -2,13 +2,13 @@
   "name": "bit-get",
   "version": "1.0.0",
   "description": "A simple Bands In Town events api wrapper",
-  "main": "src/bit-get.js",
+  "main": "./src/bit-get.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://spklein@bitbucket.org/spklein/bitget.git"
+    "url": "git+https://spklein@bitbucket.org/spklein/bit-get.git"
   },
   "keywords": [
     "Bands",
