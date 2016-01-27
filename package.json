@@ -1,6 +1,6 @@
 {
   "name": "bit-get",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple Bands In Town events api wrapper",
   "main": "./src/bit-get.js",
   "scripts": {
@@ -11,11 +11,10 @@
     "url": "git+https://spklein@bitbucket.org/spklein/bit-get.git"
   },
   "keywords": [
-    "Bands",
-    "In",
-    "Town"
+    "BandsInTown",
+    "BIT"
   ],
-  "author": "Steven Klein",
+  "author": "spklein",
   "license": "ISC",
   "homepage": "https://bitbucket.org/spklein/bitget#readme",
   "dependencies": {
