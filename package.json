@@ -1,6 +1,6 @@
 {
   "name": "bit-get",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple Bands In Town events api wrapper",
   "main": "./src/bit-get.js",
   "scripts": {
