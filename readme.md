@@ -6,13 +6,13 @@ A simple wrapper for the BandsInTown Events Search JS API.
 
 Include the compressed version in your project.
 
-```
+```javascript
 <script src="./../dist/bit-events.min.js"></script>
 ```
 
 Create an instance, set your parameters, and get some events.
 
-```
+```javascript
 var Events = new BandsInTownEvents();
 
 //set options for instance
@@ -38,7 +38,7 @@ Events.getEvents(function( events ){
 
 ### Additional Methods
 
-```
+```javascript
 //setParams - set a group of parameters as an object
 //these will merge with the currently set params
 bitGet.setParams( obj );
@@ -57,7 +57,7 @@ Events.unsetParam(key);
 ### Use with Browserify
 
 Use in your app.
-```
+```javascript
 var BandsInTownEvents = require('bandsintown-events');
 
 var Events = new BandsInTownEvents();
@@ -66,7 +66,7 @@ var Events = new BandsInTownEvents();
 ### Parameters
 
 These are the only required parameters by BandsInTown documentation.
-```
+```javascript
 {
   "app_id"  : "MyAppId",
   "artists" : "Wilco"
