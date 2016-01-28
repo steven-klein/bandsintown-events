@@ -1,6 +1,6 @@
 {
   "name": "bandsintown-events",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple Bands In Town events api wrapper",
   "main": "./dist/bit-get.js",
   "scripts": {
