@@ -58,10 +58,10 @@ Events.unsetParam(key);
 
 Use in your app.
 ```
-var Events = require( 'bandsintown-events' );
-```
+var BandsInTownEvents = require('bandsintown-events');
 
-**The main bundle is wrapped in a UML, so you should be able to consume the bundle with alternative environments.**
+var Events = new BandsInTownEvents();
+```
 
 ### Parameters
 

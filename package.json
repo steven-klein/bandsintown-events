@@ -2,7 +2,7 @@
   "name": "bandsintown-events",
   "version": "1.0.1",
   "description": "A simple Bands In Town events api wrapper",
-  "main": "./dist/bit-events.js",
+  "main": "./src/BandsInTownEvents.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
