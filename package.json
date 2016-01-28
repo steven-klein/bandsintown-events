@@ -11,8 +11,14 @@
     "url": "https://bitbucket.org/spklein/bit-get/overview"
   },
   "keywords": [
-    "BandsInTown",
-    "events"
+    "bandsintown",
+    "events",
+    "api",
+    "shows",
+    "tour",
+    "dates",
+    "artists",
+    "music"
   ],
   "author": "spklein",
   "license": "ISC",
