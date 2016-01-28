@@ -1,5 +1,6 @@
-# Bit Get
-A simple wrapper for the Bands In Town Events Search JS API.
+# BandsInTown Events
+
+A simple wrapper for the BandsInTown Events Search JS API.
 
 ### Basic Usage
 

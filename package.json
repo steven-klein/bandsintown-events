@@ -1,6 +1,6 @@
 {
-  "name": "bit-get",
-  "version": "1.0.3",
+  "name": "bandsintown-events",
+  "version": "1.0.0",
   "description": "A simple Bands In Town events api wrapper",
   "main": "./dist/bit-get.js",
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "keywords": [
     "BandsInTown",
-    "BIT"
+    "events"
   ],
   "author": "spklein",
   "license": "ISC",
