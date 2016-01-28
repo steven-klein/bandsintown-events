@@ -3,6 +3,14 @@ A simple wrapper for the Bands In Town Events Search JS API.
 
 ### Basic Usage
 
+Include the compressed version in your project.
+
+```
+<script src="./../dist/bit-get.min.js"></script>
+```
+
+Create an instance, set your parameters, and get some events.
+
 ```
 var bitGet = new bitGet();
 
@@ -18,7 +26,9 @@ bitGet.setParams({
 
 //get your events with success and error callbacks
 bitGet.getEvents(function( events ){
-  console.log(events);
+  for(var i = 0; i < events.length; i++){
+    console.log( events[i].venue.city + ", " + events[i].venue.region );
+  }
 },function( errors ){
   console.log(errors);
 });
@@ -45,15 +55,12 @@ bitGet.unsetParam(key);
 
 ### Use with Browserify
 
-Install as a node module.
-```
-npm install bit-get
-```
-
 Use in your app.
 ```
 var bitGet = require( 'bitGet' );
 ```
+
+**The main bundle is wrapped in a UML, so you should be able to consume the bundle with alternative environments.**
 
 ### Parameters
 

@@ -1,37 +1,12 @@
 /*!
  *
- * bit-get 1.0.0
+ * bit-get
  *
  */
 
-( function( window, factory ) {
-  'use strict';
-  // universal module definition
-  if ( typeof define == 'function' && define.amd ) {
-    // AMD
-    define( [
-        '../node_modules/uhttp/src/uhttp',
-      ],
-      function( uhttp ) {
-        return factory( window, uhttp );
-      });
-  } else if ( typeof exports == 'object' ) {
-    // CommonJS
-    module.exports = factory(
-      window,
-      require('../node_modules/uhttp/src/uhttp')
-    );
-  } else {
-    // browser global
-    window.bitGet = factory(
-      window,
-      window.uhttp
-    );
-  }
 
-}( window, function factory( window, uhttp ) {
-
-'use strict';
+//modules
+var reqwest = require('reqwest');
 
 // -------------------------- vars -------------------------- //
 var searchUrl = "//api.bandsintown.com/events/search?";
@@ -46,7 +21,7 @@ var searchUrl = "//api.bandsintown.com/events/search?";
     "format":"json",
       //REQUIRED cannot be changed
       //default JSON_CALLBACK
-    "callback":"JSON_CALLBACK"
+    "callback":"BIT_GET"
       //REQUIRED cannot be changed
       //default JSON_CALLBACK
   }
@@ -154,7 +129,24 @@ var searchUrl = "//api.bandsintown.com/events/search?";
   function getEvents( callback, errorback ){
     var url = searchUrl + serialize( params );
 
-    bitGet.uhttp.jsonp(url)
+    //update reqwest here
+    reqwest({
+        url: url,
+        type: 'jsonp'
+    })
+    .then( function(res){
+      if( res.errors === undefined )
+        return callback(res);
+
+      console.log("getEvents Errors: " + res.errors);
+      return errorback(res);
+
+    }).catch(function(err){
+      console.log( "getEvents failed!" );
+      console.log( err );
+    });
+
+    /*bitGet.uhttp.jsonp(url)
       .then( function(res){
         if( res.errors === undefined )
           return callback(res);
@@ -165,14 +157,11 @@ var searchUrl = "//api.bandsintown.com/events/search?";
       }).catch(function(err){
         console.log( "getEvents failed!" );
         console.log( err );
-      });
+      });*/
   }
 
 // -------------------------- bitGet Definition -------------------------- //
   var bitGet = {};
-
-  //give it it's own instance of uhttp for making requests
-  bitGet.uhttp = uhttp;
 
   bitGet.getEvents = function( callback, errorback ){
     return getEvents( callback, errorback );
@@ -194,6 +183,6 @@ var searchUrl = "//api.bandsintown.com/events/search?";
     return unsetParam( key );
   }
 
+module.exports = function(){
   return bitGet;
-
-}));
+};

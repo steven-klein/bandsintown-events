@@ -2,7 +2,7 @@
   "name": "bit-get",
   "version": "1.0.3",
   "description": "A simple Bands In Town events api wrapper",
-  "main": "./src/bit-get.js",
+  "main": "./dist/bit-get.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,18 +18,7 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/spklein/bit-get/overview",
   "dependencies": {
-    "uhttp": "^1.2.3"
+    "reqwest": "^2.0.5"
   },
-  "devDependencies": {
-    "browserify": "^13.0.0",
-    "gulp": "^3.9.0",
-    "gulp-livereload": "^3.8.1",
-    "gulp-notify": "^2.2.0",
-    "gulp-plumber": "^1.0.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-streamify": "^1.0.2",
-    "gulp-uglify": "^1.5.1",
-    "vinyl-source-stream": "^1.1.0",
-    "watchify": "^3.7.0"
-  }
+  "devDependencies": {}
 }
