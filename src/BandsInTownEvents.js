@@ -1,6 +1,6 @@
 /*!
  *
- * bit-get
+ * BandsInTownEvents
  *
  */
 
@@ -20,10 +20,8 @@ var searchUrl = "//api.bandsintown.com/events/search?";
       //REQUIRED cannot be changed
     "format":"json",
       //REQUIRED cannot be changed
-      //default JSON_CALLBACK
-    "callback":"BIT_GET"
+    "callback":"bandsintownevents"
       //REQUIRED cannot be changed
-      //default JSON_CALLBACK
   }
 
   //allowedParams that a user may decide to set
@@ -161,28 +159,26 @@ var searchUrl = "//api.bandsintown.com/events/search?";
   }
 
 // -------------------------- bitGet Definition -------------------------- //
-  var bitGet = {};
+  function BandsInTownEvents(){};
 
-  bitGet.getEvents = function( callback, errorback ){
+  BandsInTownEvents.prototype.getEvents = function( callback, errorback ){
     return getEvents( callback, errorback );
   };
 
-  bitGet.setParams = function( obj ){
+  BandsInTownEvents.prototype.setParams = function( obj ){
     return setParams( obj );
   }
 
-  bitGet.setParam = function( key, value ){
+  BandsInTownEvents.prototype.setParam = function( key, value ){
     return setParam( key, value );
   }
 
-  bitGet.getParams = function(){
+  BandsInTownEvents.prototype.getParams = function(){
     return defaultParams;
   }
 
-  bitGet.unsetParam = function( key ){
+  BandsInTownEvents.prototype.unsetParam = function( key ){
     return unsetParam( key );
   }
 
-module.exports = function(){
-  return bitGet;
-};
+  module.exports = BandsInTownEvents;

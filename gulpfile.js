@@ -13,9 +13,9 @@ var browserifyObj = function() {
   return browserify({
     cache: {},
     packageCache: {},
-    entries: ['./src/bit-get.js'],
+    entries: ['./src/BandsInTownEvents.js'],
     debug: true,
-    standalone: 'bitGet'
+    standalone: 'BandsInTownEvents'
   });
 };
 
@@ -37,11 +37,11 @@ var bundleJS = function( bundle ){
         sound:		"Basso"
       })
     }))
-		.pipe(source('bit-get.js'))
+		.pipe(source('bit-events.js'))
 		// Add transformation tasks to the pipeline here.
 		.pipe(gulp.dest( './dist/' ))
 		.pipe(livereload())
-		.pipe(rename('bit-get.min.js'))
+		.pipe(rename('bit-events.min.js'))
     .pipe(streamify(uglify()))
     .pipe(gulp.dest( './dist/' ));
 }
